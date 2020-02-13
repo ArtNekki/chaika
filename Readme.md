@@ -1,1 +1,1 @@
-Starter-kit project
+Верстка "ЖК Чайка"
