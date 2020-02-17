@@ -1,0 +1,21 @@
+.social {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  text-align: left;
+
+  &-item {
+    display: inline-block;
+    margin-right: 1px;
+
+    a,
+    svg {
+      display: block;
+    }
+
+    a {
+      padding: 14px;
+      border: 1px solid $gray;
+    }
+  }
+}

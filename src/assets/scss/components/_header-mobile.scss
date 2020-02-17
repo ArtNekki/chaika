@@ -1,0 +1,220 @@
+.header-mobile {
+  $header-height: 45px;
+
+  position: fixed;
+  background: $white;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .container {
+    border-bottom: 1px solid $gray;
+  }
+
+  &-top {
+    min-height: $header-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-label {
+    display: none;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+
+    .page--mobile-menu-open &,
+    .page--scrolled & {
+      display: block;
+    }
+  }
+
+  &-logo {
+    .page--mobile-menu-open &,
+    .page--scrolled & {
+      display: none;
+    }
+  }
+
+  &-contact {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+
+    .page--mobile-menu-open &,
+    .page--scrolled & {
+      display: none;
+    }
+  }
+
+  &-toggle {
+    position: relative;
+    width: 17px;
+    padding: 0;
+    background: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+
+    .page--scrolled & {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -15px;
+      width: 1px;
+      height: 100%;
+      background-color: $gray;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-open {
+
+    .page--mobile-menu-open & {
+      display: none;
+    }
+
+  }
+
+  &-close {
+    display: none;
+
+    .page--mobile-menu-open & {
+      display: inline-block;
+    }
+  }
+
+  &-select {
+    position: relative;
+    border: none;
+    background: none;
+    display: none;
+    font-size: 11px;
+    line-height: 13px;
+    color: $main-theme;
+    text-transform: uppercase;
+
+    .page--select-apartment & {
+      color: $black;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -4px;
+      width: 8px;
+      height: 8px;
+      border: 1px solid $main-theme;
+      border-left-color: transparent;
+      border-top-color: transparent;
+      transform-origin: 50% 50%;
+      transform: rotate3d(0, 0, 1, 45deg);
+
+      .page--select-apartment & {
+        top: 6px;
+        color: $black;
+        border-top-color: $black;
+        border-left-color: $black;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+      }
+    }
+
+    .page--scrolled & {
+      display: block;
+    }
+  }
+
+  &-dropdown {
+    position: fixed;
+    top: calc(#{$header-height} + 1px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 15px;
+    display: none;
+    overflow-y: auto;
+    background-color: $white;
+
+    &--main {
+      background-image: url("../img/svg/gull.svg");
+      background-repeat: no-repeat;
+      background-position: 225% 48%;
+      background-size: 247px 219px;
+    }
+
+    .page--mobile-menu-open &--main {
+      display: block;
+    }
+
+    .page--select-apartment &--apartment {
+      display: block;
+    }
+  }
+
+  &-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--text-right {
+      text-align: right;
+    }
+  }
+
+  &-item {
+    padding: 15px $container-padding-x;
+    background-color: $main-theme;
+    border-bottom: 1px solid lighten($main-theme, 5%);
+
+    .header-mobile-list--no-bg & {
+      padding-bottom: 0;
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    a {
+      display: block;
+      font-size: 14px;
+      line-height: 17px;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  .header-mobile-list--no-bg .header-mobile-item a {
+    display: inline;
+    color: $main-theme;
+  }
+
+  .header-mobile-list--color-second .header-mobile-item a {
+    display: inline;
+    color: $black;
+  }
+
+  &-dropdown-footer {
+    margin-top: 30px;
+    padding-right: $container-padding-x;
+    padding-left: $container-padding-x;
+    text-align: center;
+  }
+
+  &-dropdown-btn {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding: 13px 0;
+  }
+}

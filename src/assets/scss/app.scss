@@ -23,11 +23,15 @@
 @import "global/grid";
 
 //components
+@import "components/header-mobile";
+@import "components/btn";
+@import "components/social";
+
 // @import 'components/table';
 // @import 'components/map';
 // @import 'components/marker';
 // @import 'components/custom-scroll';
-// @import 'components/link';
+ @import 'components/link';
 // @import 'components/custom-checkbox';
 // @import 'components/tabs';
 // @import 'components/slider';

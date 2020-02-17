@@ -1,0 +1,19 @@
+.btn {
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 16px;
+
+  &--outline {
+    @include button($main-theme, $white, $main-theme, 2px);
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--full-width {
+    width: 100%;
+    display: block;
+  }
+}

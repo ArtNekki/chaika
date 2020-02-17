@@ -168,3 +168,20 @@
   flex-direction: column;
   flex-grow: 1;
 }
+
+@mixin button($color, $bgColor, $borderColor, $borderWidth) {
+  color: $color;
+  background-color: $bgColor;
+  border: $borderWidth solid $borderColor;
+
+  &:not(:disabled):not(.disabled):active {
+    color: $color;
+    background-color: $bgColor;
+    border-color: $borderColor;
+    //box-shadow: 0 0 0 0.2rem rgba($color, 0.5);
+  }
+
+  //&:focus {
+  //  box-shadow: none;
+  //}
+}
