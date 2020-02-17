@@ -1,0 +1,10 @@
+.page {
+
+  &--mobile-menu-open {
+    overflow: hidden;
+
+    body {
+      position: fixed;
+    }
+  }
+}
