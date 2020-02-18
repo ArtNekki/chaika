@@ -1,0 +1,35 @@
+.main-nav {
+  margin-top: 45px;
+
+  &-inner {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+  }
+
+  &-title {
+    display: none;
+  }
+
+  &-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    white-space: nowrap;
+    list-style: none;
+  }
+
+  &-item {
+    margin-right: 15px;
+  }
+
+  &-item a {
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 500;
+    color: $gray-dark;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
