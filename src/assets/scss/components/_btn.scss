@@ -1,11 +1,17 @@
 .btn {
+  background: none;
+  border: none;
   text-align: center;
   text-decoration: none;
   font-size: 13px;
   line-height: 16px;
 
+  &:focus {
+    outline: none;
+  }
+
   &--outline {
-    @include button($main-theme, $white, $main-theme, 2px);
+    @include button($main-theme, transparent, $main-theme, 2px);
   }
 
   &--uppercase {
